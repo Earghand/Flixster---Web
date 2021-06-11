@@ -43,7 +43,7 @@ function loadSearches(dat) {
         // movies.innerHTML += `<h1>hello </h1>`
         movies.innerHTML += `
         <div class="individual">
-        <button onclick="popup()"><img src=${imgs}></img></button>
+        <img src=${imgs}></img>
         <p id="titles"> ${dat.results[i].original_title} </p>
         <p id="votes">${dat.results[i].vote_average}&#11088;</p>
         </div>
