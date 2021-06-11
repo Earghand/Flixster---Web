@@ -71,7 +71,7 @@ function applyData(dat) {
 
 function addMore(){
     pageNumber+=1;
-    loadMovies()
+    loadMore()
 }
 
 function popup() {
