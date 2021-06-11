@@ -31,21 +31,21 @@ Deployed Application (optional): [Flixster Deployed Site](https://earghand.githu
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+<img src="FlixDemo.gif"/>
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics in the lab significantly helped me complete this assignment. To be specific, the lab on forms in HTML significantly helped me implement the search feature of this assignment.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time, what I would've done differently is add more animation to my css to allow the website to be more responsive. I would also add the popup feature to provide more details about the movie clicked on.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Overall, implementing the features for this project went really well. The only thing that did not go as planned was comleting the optional popup feature when a movie was clicked on because of css and api request issues. 
 
 ### Open-source libraries used
 
