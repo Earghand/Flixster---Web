@@ -4,8 +4,9 @@ const movieForm = document.querySelector("form");
 const MY_API_KEY = "e356dca30622eb9d064e6bf5f3b25ef0";
 let btn = document.getElementById('btn')
 let pageNumber = 1;
+let selectionPageNumber = 1;
 // https://api.themoviedb.org/3/movie/now_playing?api_key=<<api_key>>&language=en-US&page=1
-
+let inp = document.getElementById("ins")
 
 async function loadMovies(){
     const apiURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + MY_API_KEY + "&language=en-US&page=" + pageNumber;
@@ -52,6 +53,7 @@ function loadSearches(dat) {
 }
 
 function applyData(dat) {
+    movies.innerHTML = ``
     for(let i = 0; i<dat.results.length; i+=1) {
         // console.log(dat.results[i].poster_path);
         let imgs = "https://image.tmdb.org/t/p/w500" + dat.results[i].poster_path;
@@ -76,6 +78,31 @@ function popup() {
     console.log("popup")
 }
 
+async function loadMore(){
+    const apiURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + MY_API_KEY + "&language=en-US&page=" + pageNumber;
+    const response = await fetch(apiURL);
+    const responseData = await response.json();
+    // console.log(responseData);
+    // console.log("Hello");
+    applyMoreData(responseData);
+}
+
+function applyMoreData(dat) {
+    // movies.innerHTML = ``
+    for(let i = 0; i<dat.results.length; i+=1) {
+        // console.log(dat.results[i].poster_path);
+        let imgs = "https://image.tmdb.org/t/p/w500" + dat.results[i].poster_path;
+        // console.log(imgs);
+        // movies.innerHTML += `<h1>hello </h1>`
+        movies.innerHTML += `
+        <div class="individual">
+        <img src=${imgs} alt="imageForMovie"></img>
+        <p id="titles"> ${dat.results[i].original_title} </p>
+        <p id="votes">${dat.results[i].vote_average}&#11088;</p>
+        </div>
+        `
+    }
+}
 
 window.onload = loadMovies();
 btn.onclick = addMore;
