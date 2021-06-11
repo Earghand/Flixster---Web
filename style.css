@@ -1,16 +1,11 @@
 body {
     background-color: black;
+  
 }
 h1 {
     color: white;
 }
-#movies {
-    color: white;
-    display: flex;
-   
-    flex-wrap: wrap;
 
-}
 #title {
     color: white;
     text-align: center; 
@@ -21,12 +16,93 @@ h1 {
 #now {
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 1em;
     padding-left: 1em;
+    font-size:3em;
 }
 
 
 #titles {
     font-size: 3em;
     padding-left: 1em;
+}
+
+#movies {
+    color: white;
+    font-size:9px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.individual {
+    
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: center;
+    
+    margin: auto;
+    /* margin-bottom:inherit; */
+}
+
+#votes {
+    font-size: 25px;
+}
+
+#more {
+    
+    /* width: 70px;
+    height: 70px; */
+    margin-top:30px;
+    text-align:center;
+}
+
+#more button {
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#searching {
+    color: white;
+    text-align: center;
+    margin:auto;
+    border-radius: 25px;
+
+}
+
+#searching input {
+    font-size: 20px;
+    padding-left:5px;
+    border: 1px gray;
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+    outline:25px;
+
+}
+
+#searchBTN {
+    height:60px;
+    width:60px;
+    border-radius:15px;
+    background:lightgray;
+    
+}
+
+#searchBTN:hover {
+    color:darkgray;
+}
+
+/* The Modal (background) */
+.w3-container {
+    color: white;
+    height: 100px;
+    padding-top: 10px;
+    /* position: fixed; */
+    justify-content: center;
+    text-align: center;
+}
+
+.modalstuff {
+    color: black;
 }
